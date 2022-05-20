@@ -28,6 +28,7 @@ export class LoanTypesComponent implements OnInit {
     }
 
     this.addLoanTypesForm.setValue(newLoanObj);
+    this.addLoanTypesForm.patchValue(newLoanObj);
   }
 
   addLoanType(){
