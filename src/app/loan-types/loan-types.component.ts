@@ -18,10 +18,16 @@ export class LoanTypesComponent implements OnInit {
     // })
 
     this.addLoanTypesForm = this.fb.group({
-      'loanName' : new FormControl('ABC'),
-      'loanDesc' : new FormControl('Some by default description and data show')
+      'loanName' : new FormControl(),
+      'loanDesc' : new FormControl()
     });
 
+    const newLoanObj = {
+      'loanName' : 'Name',
+      'loanDesc' : 'description this method is used in big applications'
+    }
+
+    this.addLoanTypesForm.setValue(newLoanObj);
   }
 
   addLoanType(){
