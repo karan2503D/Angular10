@@ -32,7 +32,11 @@ export class LoanTypesComponent implements OnInit {
   }
 
   addLoanType(){
-    console.log(this.addLoanTypesForm.value);
+    // console.log(this.addLoanTypesForm.value);
+    // console.log(this.addLoanTypesForm.get('loanName').value);
+    // console.log(this.addLoanTypesForm.valueChanges.subscribe(data -> {
+    //   console.log(data);
+    // }))
   }
 
 }
