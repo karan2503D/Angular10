@@ -1,5 +1,7 @@
 <form [formGroup]="addLoanTypesForm">
-    <input type="text" formControlName="loanName" >
+    <input type="text" formControlName="loanName">
+    <!-- Retrive Value -->
+    <!-- <input type="text" formControlName="loanName" (keyup)="tracLoanName()"> -->
     <textarea formControlName="loanDesc"></textarea>
-    <button (click)="addLoanType()" [disabled]="!addLoanTypesForm.valid">Add Loan Type</button>
+    <button (click)="addLoanType()" [disabled]="!addLoanTypesForm.valid ">Add Loan Type</button>
 </form>
