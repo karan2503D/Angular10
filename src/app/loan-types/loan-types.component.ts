@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-loan-types',
@@ -18,17 +18,20 @@ export class LoanTypesComponent implements OnInit {
     // })
 
     this.addLoanTypesForm = this.fb.group({
-      'loanName' : new FormControl(),
+      'loanName' : new FormControl('', [
+        Validators.required,
+        Validators.minLength(10)
+      ]),
       'loanDesc' : new FormControl()
     });
 
-    const newLoanObj = {
-      'loanName' : 'Name',
-      'loanDesc' : 'description this method is used in big applications'
-    }
+    // const newLoanObj = {
+    //   'loanName' : 'Name',
+    //   'loanDesc' : 'description this method is used in big applications'
+    // }
 
-    this.addLoanTypesForm.setValue(newLoanObj);
-    this.addLoanTypesForm.patchValue(newLoanObj);
+    // this.addLoanTypesForm.setValue(newLoanObj);
+    // this.addLoanTypesForm.patchValue(newLoanObj);
   }
 
   addLoanType(){
